@@ -27,7 +27,10 @@ export const GIFT_FINISH = 'GIFT_FINISH';
 export const GIFT_FAIL = 'GIFT_FAIL'; 
 export const GIFT_SUCCESS= 'GIFT_SUCCESS';
 
-
 //WIDGETS SETTING
 export const UPDATE_WIDGETS = 'UPDATE_WIDGETS';
 export const FETCH_WIDGETS = 'FETCH_WIDGETS';
+
+//ADS
+export const CHECK_AD_BLOCKS = 'CHECK_AD_BLOCKS';
+export const ADS_FAIL = 'ADS_FAIL';

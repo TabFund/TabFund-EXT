@@ -38,7 +38,7 @@ const LoginForm = (props) => {
 
     return (
         <div >
-            <GoogleLogin
+            {/* <GoogleLogin
                 clientId="1098258242299-ln60f3esoh4ua8paqq2aq4t67h9it0uj.apps.googleusercontent.com"
                 buttonText="Sign in with Google"
                 onSuccess={responseGoogle}
@@ -47,7 +47,7 @@ const LoginForm = (props) => {
                 appId="2462365480700243"
                 autoLoad={true}
                 fields="name,email"
-                callback={responseFacebook} />
+                callback={responseFacebook} /> */}
             <Formik initialValues={{
                 email: '',
                 password: ''

@@ -74,7 +74,7 @@ a:hover, a:link, a:visited{
 }
 
 .clock{
-  font-size: 150px;
+  font-size: 120px;
 }
 
 .topBar{
@@ -110,7 +110,7 @@ a:hover, a:link, a:visited{
 }
 
 .date{
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 50px;
 }
 

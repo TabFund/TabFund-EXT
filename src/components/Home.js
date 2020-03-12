@@ -34,6 +34,7 @@ const Home = (props) => {
     return (
         <div className="homePage">
             <div className="clockDiv">
+                Hello
                 <div className="topBar">
                     <i class="fas fa-cog topBarIcon" onClick={() => goTo(Settings)}></i>
                     <i class="fas fa-sign-out-alt topBarIcon" onClick={() => { dispatch(signout()); }}></i>
