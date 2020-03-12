@@ -76,7 +76,9 @@ const LoginForm = (props) => {
                             </div>
                         </div>
 
-                        <button type="submit">Log In</button>
+                <button type="submit" disabled={isLoading}>
+                    {isLoading ? "Logging In..." : "Log In"}
+                    </button>
                     </Form>
                 )}
 

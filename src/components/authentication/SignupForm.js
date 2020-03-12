@@ -22,7 +22,7 @@ const SignupSchema = Yup.object().shape({
 
 const SignupForm = () => {
 
-    //const isLoading = useSelector(state => state.auth.loading);
+    const isLoading = useSelector(state => state.auth.loading);
     const error = useSelector(state => state.auth.error);
 
     const dispatch = useDispatch();
@@ -73,8 +73,8 @@ const SignupForm = () => {
                             </div>
                         </div>
 
-                        <button type="submit" >
-                            Sign Up
+                        <button type="submit" disabled={isLoading}>
+                        {isLoading ? "Singing Up..." : "Sign Up"}
                         </button>
 
                     </Form>
