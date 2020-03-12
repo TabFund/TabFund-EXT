@@ -15,9 +15,9 @@ import '../../style/authenticationForm_style.css'
 
 const LoginSchema = Yup.object().shape({
     email: Yup.string()
-        .email('* Invalid Email Format')
-        .required('* The email is Required'),
-    password: Yup.string().required('* password Required')
+        .email('Please enter your email address in format:\nyourname@example.com')
+        .required('Please insert your email.'),
+    password: Yup.string().required('You can tell us your password.\nWe won\'t tell anyone. ;)')
 })
 
 
@@ -37,7 +37,7 @@ const LoginForm = (props) => {
     const dispatch = useDispatch();
 
     return (
-        <div >
+        <div className="authenticationDiv">
             {/* <GoogleLogin
                 clientId="1098258242299-ln60f3esoh4ua8paqq2aq4t67h9it0uj.apps.googleusercontent.com"
                 buttonText="Sign in with Google"
