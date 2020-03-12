@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
+import firebase from './firebase';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,25 +7,37 @@ import Router from 'route-lite';
 import {useSelector, useDispatch} from 'react-redux';
 import * as actions from './store/actions/actionTypes';
 import {checkAdBlocks} from './store/actions/adsAction';
+import { goTo } from 'route-lite';
 import LoginForm from './components/authentication/LoginForm';
 import Home from './components/Home';
 import store from './store/storeIndex';
 
-function App() {
+const App = () => {
   console.log("App");
 
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   // dispatch(checkAdBlocks())
-  //   window.location = "https://www.google.com"
-  // })
+  // const [token, setToken] =  useState(false)
   
-  const userToken = localStorage.getItem('userToken');
-  userToken ? store.dispatch({type: actions.AUTH_SUCCESS}) : store.dispatch({type: actions.AUTH_LOGOUT});
-  console.log(userToken);
+  useEffect(() => {
+    // dispatch(checkAdBlocks())
+    // window.location = "https://www.google.com"
+    const userToken = localStorage.getItem('userToken');
+    if (userToken) {
+      store.dispatch({type: actions.AUTH_SUCCESS}) 
+      
+    } else{
+      store.dispatch({type: actions.AUTH_LOGOUT});
+      
+    } 
+    console.log("userToken : " + userToken);
+  })
+  
+
   const logged = useSelector(state =>state.auth.logged);
-  console.log(logged);
+  console.log("logged : " + logged);
+  
+
+
   return (
     // <div>
 
@@ -32,7 +45,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Router>
-          {(userToken || logged) ? <Home/> : <LoginForm />}
+          {logged ? goTo(Home) : goTo(LoginForm)}
         </Router>
       </header>
     </div>

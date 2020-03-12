@@ -24,6 +24,7 @@ export default (state = initialState, action) => {
         case actions.AUTH_SUCCESS:
             return {
                 ...state,
+                error: null,
                 logged: true
             }
         case actions.AUTH_FAIL:

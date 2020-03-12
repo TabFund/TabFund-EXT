@@ -27,14 +27,19 @@ export const signup = data => {
                     name: data.name,
                     username: data.username,
                     email: data.email
+                }).then(() => {
+                    console.log(cred.user.uid);
+                    localStorage.setItem('userToken', cred.user.uid);
+                    dispatch({ type: actions.AUTH_SUCCESS })
+                }).catch(err => {
+                    console.log(err);
+                    dispatch({ type: actions.AUTH_FAIL, payload: err.message })
                 });
-                console.log(cred.user.uid);
-                dispatch({ type: actions.AUTH_SUCCESS})
             }).catch(err => {
                 console.log(err);
                 dispatch({ type: actions.AUTH_FAIL, payload: err.message })
             })
-            dispatch({ type: actions.AUTH_FINISH });
+        dispatch({ type: actions.AUTH_FINISH });
     }
 }
 
@@ -47,20 +52,19 @@ export const login = data => {
             await firebase.auth().signInWithEmailAndPassword(data.email, data.password).then(cred => {
                 localStorage.setItem('userToken', cred.user.uid);
                 console.log("LOGIN SUCCESS");
-                
             });
-            
+
             dispatch({ type: actions.AUTH_SUCCESS });
 
         } catch (err) {
             console.log(err);
             var message;
-            if(err.code === "auth/user-not-found"){
+            if (err.code === "auth/user-not-found") {
                 message = "Invalid Email or Password"
-            }else{
+            } else {
                 message = "Error Ocurred";
             }
-            
+
             dispatch({ type: actions.AUTH_FAIL, payload: message })
         }
         dispatch({ type: actions.AUTH_FINISH });
@@ -70,11 +74,10 @@ export const login = data => {
 export const signout = () => {
     localStorage.clear();
     return async dispatch => {
+        await firebase.auth().signOut()
+            .catch(err => {
+                console.log(err);
+            })
         dispatch({ type: actions.AUTH_LOGOUT });
-
-        // await firebase.auth().signOut()
-        //     .catch(err => {
-        //         console.log(err);
-        //     })
     }
 }

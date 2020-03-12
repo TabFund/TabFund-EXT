@@ -83,7 +83,7 @@ const SignupForm = () => {
             </Formik>
             {error ?
                 <Error>
-                    Dope
+                    {error}
                 </Error>
                 :
                 null
