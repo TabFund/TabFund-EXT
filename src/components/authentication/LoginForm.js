@@ -81,6 +81,13 @@ const LoginForm = (props) => {
                 )}
 
             </Formik>
+            {error ?
+                <Error>
+                    {error}
+                </Error>
+                :
+                null
+            }
 
             <div onClick={() => goTo(SignupForm)}>
                 <h4>Sign Up</h4>
