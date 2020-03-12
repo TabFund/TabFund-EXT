@@ -15,7 +15,7 @@ const AuthenticationForm = () => {
                     <Row>
                         <Col md={{ span: 8, offset: 2 }}>
                             <div>
-                                <LoginForm />
+                                <SignupForm />
                             </div>
 
                         </Col>
