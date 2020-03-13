@@ -10,19 +10,19 @@ import { signup } from '../../store/actions/authAction';
 import '../../style/authenticationForm_style.css'
 
 
-const LoginSchema = Yup.object().shape({
-    name: Yup.string().required('* Name Required'),
-    username: Yup.string().required('* Username Required'),
+const SignupSchema = Yup.object().shape({
+    name: Yup.string().required('Please insert your name.'),
+    username: Yup.string().required('Please add a username.'),
     email: Yup.string()
-        .email('* Invalid Email Format')
-        .required('* The email is Required'),
-    password: Yup.string().required('* Password Required').min(8, 'The password is too short: Minimum 8 characters')
+        .email('Please enter your email address in format:\nyourname@example.com')
+        .required('Please insert you email.'),
+    password: Yup.string().required('Please insert your password.').min(8, 'Please insert a passwords with at least 8 characters.')
 })
 
 
 const SignupForm = () => {
 
-    //const isLoading = useSelector(state => state.auth.loading);
+    const isLoading = useSelector(state => state.auth.loading);
     const error = useSelector(state => state.auth.error);
 
     const dispatch = useDispatch();
@@ -35,7 +35,7 @@ const SignupForm = () => {
                 email: '',
                 password: ''
             }}
-                validationSchema={LoginSchema}
+                validationSchema={SignupSchema}
                 onSubmit={(values, { setSubmitting }) => {
                     console.log(values);
                     dispatch(signup(values))
@@ -73,8 +73,8 @@ const SignupForm = () => {
                             </div>
                         </div>
 
-                        <button type="submit" >
-                            Sign Up
+                        <button type="submit" disabled={isLoading}>
+                        {isLoading ? "Singing Up..." : "Sign Up"}
                         </button>
 
                     </Form>
