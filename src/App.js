@@ -20,16 +20,16 @@ const App = () => {
   
   useEffect(() => {
     // dispatch(checkAdBlocks())
-    // window.location = "https://www.google.com"
-    const userToken = localStorage.getItem('userToken');
-    if (userToken) {
-      store.dispatch({type: actions.AUTH_SUCCESS}) 
+    window.location = "http://localhost:3000/"
+    // const userToken = localStorage.getItem('userToken');
+    // if (userToken) {
+    //   store.dispatch({type: actions.AUTH_SUCCESS}) 
       
-    } else{
-      store.dispatch({type: actions.AUTH_LOGOUT});
+    // } else{
+    //   store.dispatch({type: actions.AUTH_LOGOUT});
       
-    } 
-    console.log("userToken : " + userToken);
+    // } 
+    // console.log("userToken : " + userToken);
   })
   
 
@@ -39,16 +39,16 @@ const App = () => {
 
 
   return (
-    // <div>
+    <div>
 
-    // </div>
-    <div className="App">
-      <header className="App-header">
-        <Router>
-          {logged ? goTo(Home) : goTo(LoginForm)}
-        </Router>
-      </header>
     </div>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <Router>
+    //       {logged ? goTo(Home) : goTo(LoginForm)}
+    //     </Router>
+    //   </header>
+    // </div>
   );
 }
 
