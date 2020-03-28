@@ -3,38 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@progress/kendo-drawing": "^1.6.0",
-    "@progress/kendo-react-inputs": "^3.6.0",
-    "@progress/kendo-react-intl": "^3.6.0",
-    "@vtaits/react-color-picker": "^0.1.1",
     "bootstrap": "^4.3.1",
-    "cldr": "^5.5.3",
-    "cldr-data": "^36.0.0",
-    "formik": "^2.0.3",
-    "globalize": "^1.4.2",
-    "iana-tz-data": "^2019.1.0",
+    
     "moment": "^2.24.0",
     "node.js": "0.0.0",
     "react": "^16.11.0",
-    "react-big-calendar": "^0.23.0",
+    
     "react-bootstrap": "^1.0.0-beta.14",
-    "react-color-picker": "^4.0.2",
-    "react-datepicker": "^2.10.0",
+    
     "react-dom": "^16.11.0",
-    "react-event-calendar": "^0.3.0",
-    "react-facebook-login": "^4.1.1",
-    "react-google-calendar-api": "^1.0.10",
-    "react-google-login": "^5.0.7",
-    "react-live-clock": "^3.1.0",
-    "react-redux": "^7.1.1",
-    "react-scripts": "^3.2.0",
-    "react-simple-colorpicker": "^1.4.2",
-    "reactstrap": "^8.1.1",
-    "redux": "^4.0.4",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
-    "route-lite": "^0.3.0",
-    "yup": "^0.27.0"
+    
+    "react-scripts": "3.2.0",
+    
+    "reactstrap": "^8.1.1"
+   
   },
   "scripts": {
     "start": "react-scripts start",
