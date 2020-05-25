@@ -1,10 +1,10 @@
 
 {
   "manifest_version": 2,
-  "name": "Gift Tab",
-  "author": "Hu Chen",
+  "name": "Tab Fund",
+  "author": "Tab Fund",
   "version": "1.0.1",
-  "description": "Replace new tab screen with Gift Tab!",
+  "description": "Replace new tab screen with Tab Fund!",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
