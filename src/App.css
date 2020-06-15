@@ -19,8 +19,21 @@ iframe{
     background: none;
 }
 
+#wrap {
+  position: relative;
+  width: 1920px;
+  height: 9460px;
+  margin: auto;
+}
+#outer {
+  position: relative;
+  width: 1920px;
+  height: 946px;
+  -webkit-transform-origin: top left;
+}
+
 .backgroundImage{
-  height: 100vh;
+  height: 100%;
   z-index: -1;
   width: 100%;
   display: flex;
