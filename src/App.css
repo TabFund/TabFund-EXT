@@ -1,13 +1,13 @@
-body{
-  line-height: normal;
-  background: none;
+body {
+    line-height: normal;
+    background: none;
 }
 
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-iframe{
+iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +19,8 @@ iframe{
     background: none;
 }
 
-#wrap {
+
+/* #wrap {
   position: relative;
   width: 1920px;
   height: 9460px;
@@ -30,12 +31,12 @@ iframe{
   width: 1920px;
   height: 946px;
   -webkit-transform-origin: top left;
-}
+} */
 
-.backgroundImage{
-  height: 100%;
-  z-index: -1;
-  width: 100%;
-  display: flex;
-  position: absolute;
+.backgroundImage {
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    position: absolute;
 }
