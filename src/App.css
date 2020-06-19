@@ -1,6 +1,5 @@
 body {
     line-height: normal;
-    background: none;
 }
 
 .App {
@@ -17,6 +16,7 @@ iframe {
     padding: 0;
     border: none;
     background: none;
+    background-color: transparent;
 }
 
 
@@ -39,4 +39,9 @@ iframe {
     width: 100%;
     display: flex;
     position: absolute;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
 }
