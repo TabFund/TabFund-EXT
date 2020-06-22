@@ -56,7 +56,7 @@ const App = () => {
   return (
     <div>
       <img className="backgroundImage " src={require('./img/background/joao_lopes_' + localStorage.getItem('imageNumber') + '.JPG')} alt="background" />
-      <iframe title="TabFund" src="http://localhost:3000//">
+      <iframe title="TabFund" src="http://extension.tab.fund">
         <p>Your browser does not support iframes.</p>
       </iframe>
       {/* <div id="wrap">
