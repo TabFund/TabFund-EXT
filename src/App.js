@@ -18,7 +18,7 @@ const App = () => {
       localStorage.setItem('yesterdayDate', new Date())
       let imageNumber = localStorage.getItem('imageNumber')
 
-      if (localStorage.getItem('imageNumber') === '15') {
+      if (localStorage.getItem('imageNumber') === '14') {
         localStorage.setItem('imageNumber', 1)
       } else {
         imageNumber++
@@ -56,7 +56,7 @@ const App = () => {
   return (
     <div>
       <img className="backgroundImage " src={require('./img/background/joao_lopes_' + localStorage.getItem('imageNumber') + '.JPG')} alt="background" />
-      <iframe title="TabFund" src="http://extension.tab.fund">
+      <iframe title="TabFund" src="https://extension.tab.fund">
         <p>Your browser does not support iframes.</p>
       </iframe>
       {/* <div id="wrap">
