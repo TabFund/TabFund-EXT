@@ -3,11 +3,11 @@ import './App.css';
 import $ from "jquery"
 const App = () => {
 
-  // useEffect(() => {
-  //   resize();
-  //   window.addEventListener('resize', resize)
-  // })
-
+ const loadingIframe = () => {
+  document.getElementById('iframe').style.visibility = 'visible'
+  // document.getElementById('iframe').style.display = 'none'
+ }
+  
   const yesterdayDate = localStorage.getItem('yesterdayDate');
   if (yesterdayDate) {
     var yesterday = new Date(yesterdayDate);
@@ -56,7 +56,7 @@ const App = () => {
   return (
     <div>
       <img className="backgroundImage " src={require('./img/background/joao_lopes_' + localStorage.getItem('imageNumber') + '.JPG')} alt="background" />
-      <iframe title="TabFund" src="http://extension.tab.fund">
+      <iframe id='iframe' onLoad={() => {loadingIframe()}} title="TabFund" src="http://localhost:3000">
         <p>Your browser does not support iframes.</p>
       </iframe>
       {/* <div id="wrap">
