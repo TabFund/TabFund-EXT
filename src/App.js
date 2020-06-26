@@ -18,7 +18,7 @@ const App = () => {
       localStorage.setItem('yesterdayDate', new Date())
       let imageNumber = localStorage.getItem('imageNumber')
 
-      if (localStorage.getItem('imageNumber') === '15') {
+      if (localStorage.getItem('imageNumber') === '14') {
         localStorage.setItem('imageNumber', 1)
       } else {
         imageNumber++
