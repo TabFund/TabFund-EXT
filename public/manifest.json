@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "TabFund",
   "version": "1.0.1",
-  "description": "Raise money for Research while browsing the internet with each new open tab!",
+  "description": "Raise money for Research with each new tab you open while browsing the internet!",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
